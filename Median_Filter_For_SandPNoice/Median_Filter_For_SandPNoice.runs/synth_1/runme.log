@@ -1,0 +1,1243 @@
+
+*** Running vivado
+    with args -log main_component.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_component.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source main_component.tcl -notrace
+Command: synth_design -top main_component -part xc7a35tcpg236-1
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'uartlite' is locked:
+* This IP has board specific outputs. Current project board 'unset' and the board 'digilentinc.com:basys3:part0:1.1' used to customize the IP 'uartlite' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10824 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 847.156 ; gain = 234.500
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:20]
+	Parameter addr_length_g bound to: 14 - type: integer 
+	Parameter data_size_g bound to: 8 - type: integer 
+	Parameter input_image_length_g bound to: 100 - type: integer 
+	Parameter output_image_length_g bound to: 102 - type: integer 
+INFO: [Synth 8-3491] module 'padding_component' declared at 'H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/padding_component.vhd:8' bound to instance 'padding_unit_main' of component 'padding_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'padding_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/padding_component.vhd:30]
+	Parameter addr_length_g bound to: 14 - type: integer 
+	Parameter data_size_g bound to: 8 - type: integer 
+	Parameter base_val_g bound to: 0 - type: integer 
+	Parameter input_image_length_g bound to: 100 - type: integer 
+	Parameter output_image_length_g bound to: 102 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element input_value_reg was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/padding_component.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'padding_component' (1#1) [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/padding_component.vhd:30]
+	Parameter addr_bit_size bound to: 14 - type: integer 
+	Parameter data_bit_size bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'convolution_component' declared at 'H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/convolution_component.vhd:7' bound to instance 'convolution_component_main' of component 'convolution_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:248]
+INFO: [Synth 8-638] synthesizing module 'convolution_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/convolution_component.vhd:23]
+	Parameter addr_bit_size bound to: 14 - type: integer 
+	Parameter data_bit_size bound to: 8 - type: integer 
+	Parameter addr_bit_size bound to: 14 - type: integer 
+	Parameter data_bit_size bound to: 8 - type: integer 
+	Parameter input_image_length_g bound to: 100 - type: integer 
+	Parameter output_image_length_g bound to: 102 - type: integer 
+INFO: [Synth 8-3491] module 'kernel_component' declared at 'H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/kernel_component.vhd:8' bound to instance 'kernal_component_1' of component 'kernel_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/convolution_component.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'kernel_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/kernel_component.vhd:33]
+	Parameter addr_bit_size bound to: 14 - type: integer 
+	Parameter data_bit_size bound to: 8 - type: integer 
+	Parameter input_image_length_g bound to: 100 - type: integer 
+	Parameter output_image_length_g bound to: 102 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'kernel_component' (2#1) [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/kernel_component.vhd:33]
+	Parameter addr_length_g bound to: 14 - type: integer 
+	Parameter data_size_g bound to: 8 - type: integer 
+	Parameter base_val_g bound to: 0 - type: integer 
+	Parameter input_image_length_g bound to: 100 - type: integer 
+	Parameter output_image_length_g bound to: 102 - type: integer 
+INFO: [Synth 8-3491] module 'sort_component' declared at 'H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:8' bound to instance 'sort_component_1' of component 'sort_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/convolution_component.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'sort_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:36]
+	Parameter addr_length_g bound to: 14 - type: integer 
+	Parameter data_size_g bound to: 8 - type: integer 
+	Parameter base_val_g bound to: 0 - type: integer 
+	Parameter input_image_length_g bound to: 100 - type: integer 
+	Parameter output_image_length_g bound to: 102 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[0] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[1] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[2] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[3] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[4] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[5] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[6] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[7] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_mat_reg[8] was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:59]
+WARNING: [Synth 8-6014] Unused sequential element temp_reg was removed.  [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'sort_component' (3#1) [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/sort_component.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'convolution_component' (4#1) [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/convolution_component.vhd:23]
+INFO: [Synth 8-3491] module 'io_ram' declared at 'h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/io_ram/synth/io_ram.vhd:59' bound to instance 'io_ram_main' of component 'io_ram' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'io_ram' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/io_ram/synth/io_ram.vhd:69]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: io_ram.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 1 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: NO_CHANGE - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 10000 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 10000 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 14 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 10000 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 10000 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 14 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 2 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 1 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.027143 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/padd_ram/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/io_ram/synth/io_ram.vhd:234]
+INFO: [Synth 8-256] done synthesizing module 'io_ram' (15#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/io_ram/synth/io_ram.vhd:69]
+INFO: [Synth 8-3491] module 'padd_ram' declared at 'h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/padd_ram/synth/padd_ram.vhd:59' bound to instance 'padd_ram_main' of component 'padd_ram' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:267]
+INFO: [Synth 8-638] synthesizing module 'padd_ram' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/padd_ram/synth/padd_ram.vhd:69]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: padd_ram.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 1 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: NO_CHANGE - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 10404 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 10404 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 14 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 8 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 10404 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 10404 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 14 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 3 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     2.20835 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/padd_ram/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/padd_ram/synth/padd_ram.vhd:234]
+INFO: [Synth 8-256] done synthesizing module 'padd_ram' (16#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/padd_ram/synth/padd_ram.vhd:69]
+INFO: [Synth 8-3491] module 'state_control_component' declared at 'H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/state_control_component.vhd:6' bound to instance 'state_control_component_main' of component 'state_control_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:274]
+INFO: [Synth 8-638] synthesizing module 'state_control_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/state_control_component.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'state_control_component' (17#1) [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/state_control_component.vhd:35]
+	Parameter addr_length_g bound to: 14 - type: integer 
+	Parameter data_size_g bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'signal_selection_component' declared at 'H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/signal_selection_component.vhd:9' bound to instance 'signal_selection_component_main' of component 'signal_selection_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:295]
+INFO: [Synth 8-638] synthesizing module 'signal_selection_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/signal_selection_component.vhd:42]
+	Parameter address_length_g bound to: 14 - type: integer 
+	Parameter data_size_g bound to: 8 - type: integer 
+WARNING: [Synth 8-3819] Generic 'addr_length_g' not present in instantiated entity will be ignored [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:295]
+INFO: [Synth 8-256] done synthesizing module 'signal_selection_component' (18#1) [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/signal_selection_component.vhd:42]
+	Parameter mem_addr_size_g bound to: 14 - type: integer 
+	Parameter pixel_data_size_g bound to: 8 - type: integer 
+	Parameter base_val bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'uart_commi_component' declared at 'H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/uart_commi_component.vhd:7' bound to instance 'uart_commi_component_main' of component 'uart_commi_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:317]
+INFO: [Synth 8-638] synthesizing module 'uart_commi_component' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/uart_commi_component.vhd:49]
+	Parameter pixel_data_size_g bound to: 8 - type: integer 
+	Parameter memory_addr_size_g bound to: 14 - type: integer 
+	Parameter base_val_g bound to: 0 - type: integer 
+WARNING: [Synth 8-3819] Generic 'mem_addr_size_g' not present in instantiated entity will be ignored [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:317]
+WARNING: [Synth 8-3819] Generic 'base_val' not present in instantiated entity will be ignored [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:317]
+INFO: [Synth 8-256] done synthesizing module 'uart_commi_component' (19#1) [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/uart_commi_component.vhd:49]
+INFO: [Synth 8-3491] module 'uartlite' declared at 'h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/synth/uartlite.vhd:59' bound to instance 'uartlite_main' of component 'uartlite' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:346]
+INFO: [Synth 8-638] synthesizing module 'uartlite' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/synth/uartlite.vhd:86]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_uartlite' declared at 'h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2128' bound to instance 'U0' of component 'axi_uartlite' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/synth/uartlite.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'uartlite_core' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'baudrate' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
+	Parameter C_RATIO bound to: 651 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'baudrate' (20#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
+INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 32 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (21#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+	Parameter C_DWIDTH bound to: 8 - type: integer 
+	Parameter C_DEPTH bound to: 16 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+	Parameter C_DWIDTH bound to: 8 - type: integer 
+	Parameter C_DEPTH bound to: 16 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+	Parameter C_SIZE bound to: 5 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (22#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+	Parameter C_DEPTH bound to: 16 - type: integer 
+	Parameter C_DWIDTH bound to: 8 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (23#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (24#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (25#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (26#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
+INFO: [Synth 8-638] synthesizing module 'uartlite_tx' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (27#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (28#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000000001111 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 0 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_IPIF_ABUS_WIDTH bound to: 4 - type: integer 
+	Parameter C_IPIF_DBUS_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 15 - type: integer 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+	Parameter C_BUS_AWIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 15 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b00 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (29#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b01 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (29#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b10 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (29#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b11 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (29#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (30#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+WARNING: [Synth 8-6014] Unused sequential element is_read_reg was removed.  [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2447]
+WARNING: [Synth 8-6014] Unused sequential element is_write_reg was removed.  [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2448]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (31#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (32#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (33#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
+INFO: [Synth 8-256] done synthesizing module 'uartlite' (34#1) [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/synth/uartlite.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'main_component' (35#1) [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/main_component.vhd:20]
+WARNING: [Synth 8-3331] design address_decoder has unconnected port Address_In_Erly[2]
+WARNING: [Synth 8-3331] design address_decoder has unconnected port Address_In_Erly[3]
+WARNING: [Synth 8-3331] design address_decoder has unconnected port Bus_RNW
+WARNING: [Synth 8-3331] design slave_attachment has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design slave_attachment has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design slave_attachment has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design slave_attachment has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_resetn
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[31]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[30]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[29]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[28]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[27]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[26]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[25]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[24]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[23]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[22]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[21]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[20]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[19]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[18]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[17]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[16]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[15]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[14]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[13]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[12]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[11]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[10]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[9]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[8]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[7]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[6]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[5]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[4]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[3]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[2]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[0]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port scndry_resetn
+WARNING: [Synth 8-3331] design uartlite_core has unconnected port bus2ip_cs
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_bresp_in[1]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_bresp_in[0]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[31]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[30]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[29]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[28]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[27]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[26]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[25]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[24]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[23]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[22]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[21]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[20]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[19]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[18]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[17]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[16]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[15]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[14]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[13]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[12]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[11]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[10]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[9]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rdata_in[8]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rresp_in[1]
+WARNING: [Synth 8-3331] design uart_commi_component has unconnected port uart_s_axi_rresp_in[0]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[7]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[6]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[5]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[4]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[3]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[2]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[1]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[0]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port SBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[13]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[12]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[11]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[10]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[9]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[8]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[7]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[6]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[5]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[4]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[3]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[2]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[1]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized4 has unconnected port SSRA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized4 has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized4 has unconnected port SSRB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper_init__parameterized4 has unconnected port ENB
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:27 ; elapsed = 00:01:31 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:27 ; elapsed = 00:01:31 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.227 . Memory (MB): peak = 1258.359 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/uartlite_board.xdc] for cell 'uartlite_main/U0'
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/uartlite_board.xdc:3]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+CRITICAL WARNING: [Constraints 18-638] Undefined BOARD_PART property for current project while applying board-derived constraints. [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/uartlite_board.xdc:4]
+Resolution: Please set the correct BOARD_PART property for the current project and reapply the constraints.
+Finished Parsing XDC File [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/uartlite_board.xdc] for cell 'uartlite_main/U0'
+Parsing XDC File [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/uartlite.xdc] for cell 'uartlite_main/U0'
+Finished Parsing XDC File [h:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/uartlite.xdc] for cell 'uartlite_main/U0'
+Parsing XDC File [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/constrs_1/new/median.xdc]
+Finished Parsing XDC File [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/constrs_1/new/median.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/constrs_1/new/median.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_component_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_component_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_component_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_component_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1258.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  FDR => FDRE: 6 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.203 . Memory (MB): peak = 1258.359 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for uartlite_main/U0. (constraint file  H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/synth_1/dont_touch.xdc, line 16).
+Applied set_property DONT_TOUCH = true for uartlite_main. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for padd_ram_main. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for io_ram_main. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:01:52 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/kernel_component.vhd:121]
+INFO: [Synth 8-5545] ROM "dataout0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dataout1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dataout2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dataout3" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dataout4" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dataout5" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dataout6" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dataout7" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "dataout8" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'op_state_reg' in module 'state_control_component'
+INFO: [Synth 8-5544] ROM "op_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'uart_s_axi_wvalid_out_reg' into 'uart_s_axi_awvalid_out_reg' [H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sources_1/new/uart_commi_component.vhd:123]
+INFO: [Synth 8-802] inferred FSM for state register 'comm_state_reg' in module 'uart_commi_component'
+INFO: [Synth 8-5544] ROM "finished_operation_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "write_wait" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "fetch_wait" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                           000001 |                              000
+          receiving_data |                           000010 |                              001
+                 padding |                           000100 |                              010
+             convolution |                           001000 |                              011
+            sending_data |                           010000 |                              100
+               completed |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'op_state_reg' using encoding 'one-hot' in module 'state_control_component'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                        000000001 |                             0000
+         set_control_reg |                        000000010 |                             0001
+          data_receiving |                        000000100 |                             0100
+            data_storing |                        000001000 |                             0101
+        incrementing_rec |                        000010000 |                             0111
+           data_fetching |                        000100000 |                             0010
+            data_sending |                        001000000 |                             0011
+       incrementing_send |                        010000000 |                             0110
+                    done |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'comm_state_reg' using encoding 'one-hot' in module 'uart_commi_component'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                             0010 |                               00
+                 sm_read |                             1000 |                               01
+                sm_write |                             0100 |                               10
+                 sm_resp |                             0001 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:52 ; elapsed = 00:01:58 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input     14 Bit       Adders := 9     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 11    
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 7     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 13    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 76    
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 3     
+	   9 Input     32 Bit        Muxes := 4     
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 6     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 135   
+	   4 Input      8 Bit        Muxes := 2     
+	   9 Input      8 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 3     
+	   9 Input      4 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 163   
+	   4 Input      1 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 9     
+	   6 Input      1 Bit        Muxes := 17    
+	   7 Input      1 Bit        Muxes := 22    
+	   9 Input      1 Bit        Muxes := 25    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module padding_component 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     31 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 1     
+Module kernel_component 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     14 Bit       Adders := 9     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	  10 Input      1 Bit        Muxes := 9     
+Module sort_component 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 130   
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module bindec 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 8     
+Module blk_mem_gen_mux 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module blk_mem_gen_mux__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
+Module bindec__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module blk_mem_gen_mux__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               14 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module blk_mem_gen_mux__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module state_control_component 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   6 Input      1 Bit        Muxes := 17    
+Module signal_selection_component 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module uart_commi_component 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 5     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 2     
+	   9 Input     32 Bit        Muxes := 4     
+	   9 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	   9 Input      8 Bit        Muxes := 1     
+	   7 Input      4 Bit        Muxes := 3     
+	   9 Input      4 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 22    
+	   9 Input      1 Bit        Muxes := 25    
+Module baudrate 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module cntr_incr_decr_addn_f 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+Module srl_fifo_rbu_f 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module uartlite_rx 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 85    
+Module uartlite_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module uartlite_core 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module pselect_f 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module address_decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 6     
+Module slave_attachment 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[0]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[14]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[15]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[16]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[17]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[18]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[19]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[20]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[21]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[22]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[23]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[24]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[25]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[26]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[27]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[28]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[29]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[30]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[31]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[1]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[2]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[2]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[3]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[3]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[4]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[4]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[5]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[5]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[6]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[6]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[7]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[7]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[8]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[8]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[9]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[9]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[10]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[10]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[11]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[11]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[12]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/kernal_component_1/index_reg[12]' (FDCE) to 'convolution_component_main/kernal_component_1/index_reg[13]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\convolution_component_main/kernal_component_1/index_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\convolution_component_main/kernal_component_1/padde_ena_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\padding_unit_main/ioi_wea_out_reg[0] )
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[1]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[2]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[3]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[4]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[5]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[6]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[7]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[8]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[9]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[10]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[11]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[12]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[13]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[14]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[15]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[16]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[17]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[18]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[19]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[20]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[21]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[22]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[23]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[24]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[25]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[26]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[27]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[28]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[29]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/waitkey_reg[30]' (FDC) to 'convolution_component_main/sort_component_1/waitkey_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\convolution_component_main/sort_component_1 /\waitkey_reg[31] )
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/axi_set_cr_sub_state_reg[2]' (FDE) to 'uart_commi_component_main/axi_set_cr_sub_state_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\uart_commi_component_main/uart_s_axi_wstrb_out_reg[0] )
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wstrb_out_reg[1]' (FDE) to 'uart_commi_component_main/uart_s_axi_wstrb_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wstrb_out_reg[2]' (FDE) to 'uart_commi_component_main/uart_s_axi_wstrb_out_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_commi_component_main/uart_s_axi_wstrb_out_reg[3] )
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[8]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[9]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[10]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[11]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[12]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[13]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[14]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[15]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[16]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[17]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[18]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[19]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[20]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[21]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[22]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[23]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[24]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[25]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[26]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[27]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[28]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[29]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[30]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_wdata_out_reg[31]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[0]' (FDE) to 'uart_commi_component_main/uart_s_axi_awaddr_out_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart_commi_component_main/uart_s_axi_awaddr_out_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uartlite_main/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (uartlite_main/U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0] )
+INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_uartlite.
+INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_uartlite.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:27 ; elapsed = 00:02:36 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:43 ; elapsed = 00:02:52 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:56 ; elapsed = 00:03:05 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[1]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[1]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[2]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[2]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[3]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[3]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[4]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[4]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[5]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[5]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[6]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[6]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[7]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[7]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[8]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[8]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[9]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[9]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[10]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[10]'
+INFO: [Synth 8-3886] merging instance 'convolution_component_main/sort_component_1/addres_reg[11]' (FDCE) to 'convolution_component_main/sort_component_1/count_reg[11]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:00 ; elapsed = 00:03:09 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:10 ; elapsed = 00:03:18 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:10 ; elapsed = 00:03:18 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:10 ; elapsed = 00:03:19 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:10 ; elapsed = 00:03:19 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:11 ; elapsed = 00:03:20 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:11 ; elapsed = 00:03:20 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|axi_uartlite | UARTLITE_CORE_I/UARTLITE_RX_I/data_shift_reg[15] | 16     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|axi_uartlite | UARTLITE_CORE_I/UARTLITE_TX_I/data_shift_reg[15] | 15     | 1     | YES          | NO                 | YES               | 1      | 0       | 
++-------------+--------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                  | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | INFERRED_GEN.data_reg[15] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   306|
+|3     |LUT1     |   198|
+|4     |LUT2     |   291|
+|5     |LUT3     |   429|
+|6     |LUT4     |   302|
+|7     |LUT5     |   781|
+|8     |LUT6     |   858|
+|9     |MUXF7    |    21|
+|10    |RAMB18E1 |     1|
+|11    |RAMB36E1 |     5|
+|12    |SRL16E   |    18|
+|13    |FDCE     |   397|
+|14    |FDPE     |    19|
+|15    |FDR      |     4|
+|16    |FDRE     |   324|
+|17    |FDSE     |    18|
+|18    |IBUF     |     4|
+|19    |OBUF     |     7|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------------------------------------------------------------------+----------------------------------------------+------+
+|      |Instance                                                                    |Module                                        |Cells |
++------+----------------------------------------------------------------------------+----------------------------------------------+------+
+|1     |top                                                                         |                                              |  3984|
+|2     |  io_ram_main                                                               |io_ram                                        |    23|
+|3     |    U0                                                                      |blk_mem_gen_v8_4_4                            |    23|
+|4     |      inst_blk_mem_gen                                                      |blk_mem_gen_v8_4_4_synth                      |    23|
+|5     |        \gnbram.gnativebmg.native_blk_mem_gen                               |blk_mem_gen_top                               |    23|
+|6     |          \valid.cstr                                                       |blk_mem_gen_generic_cstr                      |    23|
+|7     |            \bindec_a.bindec_inst_a                                         |bindec                                        |     1|
+|8     |            \has_mux_a.A                                                    |blk_mem_gen_mux                               |    17|
+|9     |            \ramloop[0].ram.r                                               |blk_mem_gen_prim_width                        |     2|
+|10    |              \prim_init.ram                                                |blk_mem_gen_prim_wrapper_init                 |     2|
+|11    |            \ramloop[1].ram.r                                               |blk_mem_gen_prim_width__parameterized0        |     2|
+|12    |              \prim_init.ram                                                |blk_mem_gen_prim_wrapper_init__parameterized0 |     2|
+|13    |            \ramloop[2].ram.r                                               |blk_mem_gen_prim_width__parameterized1        |     1|
+|14    |              \prim_init.ram                                                |blk_mem_gen_prim_wrapper_init__parameterized1 |     1|
+|15    |  padd_ram_main                                                             |padd_ram                                      |    20|
+|16    |    U0                                                                      |blk_mem_gen_v8_4_4__parameterized1            |    20|
+|17    |      inst_blk_mem_gen                                                      |blk_mem_gen_v8_4_4_synth__parameterized0      |    20|
+|18    |        \gnbram.gnativebmg.native_blk_mem_gen                               |blk_mem_gen_top__parameterized0               |    20|
+|19    |          \valid.cstr                                                       |blk_mem_gen_generic_cstr__parameterized0      |    20|
+|20    |            \has_mux_a.A                                                    |blk_mem_gen_mux__parameterized1               |    14|
+|21    |            \ramloop[0].ram.r                                               |blk_mem_gen_prim_width__parameterized2        |     2|
+|22    |              \prim_init.ram                                                |blk_mem_gen_prim_wrapper_init__parameterized2 |     2|
+|23    |            \ramloop[1].ram.r                                               |blk_mem_gen_prim_width__parameterized3        |     2|
+|24    |              \prim_init.ram                                                |blk_mem_gen_prim_wrapper_init__parameterized3 |     2|
+|25    |            \ramloop[2].ram.r                                               |blk_mem_gen_prim_width__parameterized4        |     2|
+|26    |              \prim_init.ram                                                |blk_mem_gen_prim_wrapper_init__parameterized4 |     2|
+|27    |  uartlite_main                                                             |uartlite                                      |   252|
+|28    |    U0                                                                      |axi_uartlite                                  |   252|
+|29    |      AXI_LITE_IPIF_I                                                       |axi_lite_ipif                                 |    70|
+|30    |        I_SLAVE_ATTACHMENT                                                  |slave_attachment                              |    70|
+|31    |          I_DECODER                                                         |address_decoder                               |    42|
+|32    |            \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I  |pselect_f                                     |     1|
+|33    |            \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I  |pselect_f__parameterized1                     |     1|
+|34    |      UARTLITE_CORE_I                                                       |uartlite_core                                 |   182|
+|35    |        BAUD_RATE_I                                                         |baudrate                                      |    26|
+|36    |        UARTLITE_RX_I                                                       |uartlite_rx                                   |    93|
+|37    |          INPUT_DOUBLE_REGS3                                                |cdc_sync                                      |     8|
+|38    |          SRL_FIFO_I                                                        |srl_fifo_f_0                                  |    27|
+|39    |            I_SRL_FIFO_RBU_F                                                |srl_fifo_rbu_f_1                              |    27|
+|40    |              CNTR_INCR_DECR_ADDN_F_I                                       |cntr_incr_decr_addn_f_2                       |    16|
+|41    |              DYNSHREG_F_I                                                  |dynshreg_f_3                                  |     9|
+|42    |        UARTLITE_TX_I                                                       |uartlite_tx                                   |    54|
+|43    |          SRL_FIFO_I                                                        |srl_fifo_f                                    |    32|
+|44    |            I_SRL_FIFO_RBU_F                                                |srl_fifo_rbu_f                                |    32|
+|45    |              CNTR_INCR_DECR_ADDN_F_I                                       |cntr_incr_decr_addn_f                         |    18|
+|46    |              DYNSHREG_F_I                                                  |dynshreg_f                                    |    13|
+|47    |  signal_selection_component_main                                           |signal_selection_component                    |    36|
+|48    |  convolution_component_main                                                |convolution_component                         |  2224|
+|49    |    kernal_component_1                                                      |kernel_component                              |  2153|
+|50    |    sort_component_1                                                        |sort_component                                |    70|
+|51    |  padding_unit_main                                                         |padding_component                             |   995|
+|52    |  state_control_component_main                                              |state_control_component                       |    40|
+|53    |  uart_commi_component_main                                                 |uart_commi_component                          |   382|
++------+----------------------------------------------------------------------------+----------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:11 ; elapsed = 00:03:20 . Memory (MB): peak = 1258.359 ; gain = 645.703
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 360 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:32 ; elapsed = 00:03:07 . Memory (MB): peak = 1258.359 ; gain = 645.703
+Synthesis Optimization Complete : Time (s): cpu = 00:03:11 ; elapsed = 00:03:20 . Memory (MB): peak = 1258.359 ; gain = 645.703
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.076 . Memory (MB): peak = 1258.359 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 337 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1258.359 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  FDR => FDRE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+226 Infos, 116 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:20 ; elapsed = 00:03:30 . Memory (MB): peak = 1258.359 ; gain = 919.516
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1258.359 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/synth_1/main_component.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_component_utilization_synth.rpt -pb main_component_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 22 14:40:11 2020...

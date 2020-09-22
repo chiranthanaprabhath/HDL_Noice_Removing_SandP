@@ -1,0 +1,7 @@
+Running: xsim.dir/padding_component_test_behav/xsimk.exe -simmode gui -wdb padding_component_test_behav.wdb -simrunnum 0 -socket 12587
+Design successfully loaded
+Design Loading Memory Usage: 6144 KB (Peak: 6144 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 24860 KB (Peak: 24860 KB)
+Simulation CPU Usage: 562 ms

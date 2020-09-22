@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Sep 22 11:11:23 2020
+# Process ID: 15456
+# Current directory: H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/impl_1
+# Command line: vivado.exe -log main_component.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main_component.tcl -notrace
+# Log file: H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/impl_1/main_component.vdi
+# Journal file: H:/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source main_component.tcl -notrace

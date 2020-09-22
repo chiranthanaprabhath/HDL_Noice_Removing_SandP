@@ -1,0 +1,1 @@
+-wto "346904a4b4e64b0bad82b581b8b9d543" --incr --debug "typical" --relax --mt "2" -L "blk_mem_gen_v8_4_4" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "convolution_componet_test_behav" "xil_defaultlib.convolution_componet_test" "xil_defaultlib.glbl" -log "elaborate.log" 

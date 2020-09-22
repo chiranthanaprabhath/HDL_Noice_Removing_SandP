@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../Median_Filter_For_SandPNoice.srcs/sources_1/ip/uartlite/sim/uartlite.vhd" \
+
+nosort

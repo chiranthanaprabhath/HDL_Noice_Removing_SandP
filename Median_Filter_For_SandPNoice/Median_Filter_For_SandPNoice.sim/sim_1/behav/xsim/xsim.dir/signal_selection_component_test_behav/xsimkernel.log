@@ -1,0 +1,7 @@
+Running: xsim.dir/signal_selection_component_test_behav/xsimk.exe -simmode gui -wdb signal_selection_component_test_behav.wdb -simrunnum 0 -socket 12649
+Design successfully loaded
+Design Loading Memory Usage: 5756 KB (Peak: 5756 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 6364 KB (Peak: 6364 KB)
+Simulation CPU Usage: 31 ms

@@ -1,0 +1,112 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Sep 22 08:48:16 2020
+# Process ID: 2760
+# Current directory: F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5972 F:\Semester 7\HDL\project\Median_Filter_For_SandPNoice\Median_Filter_For_SandPNoice.xpr
+# Log file: F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/vivado.log
+# Journal file: F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'uartlite' is locked:
+* This IP has board specific outputs. Current project board 'unset' and the board 'digilentinc.com:basys3:part0:1.1' used to customize the IP 'uartlite' do not match.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 705.973 ; gain = 119.195
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd} w ]
+add_files -fileset sim_1 {{F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd}}
+update_compile_order -fileset sim_1
+set_property top signal_selection_component_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'signal_selection_component_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj signal_selection_component_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signal_selection_component_test'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim'
+"xelab -wto 346904a4b4e64b0bad82b581b8b9d543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot signal_selection_component_test_behav xil_defaultlib.signal_selection_component_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 346904a4b4e64b0bad82b581b8b9d543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot signal_selection_component_test_behav xil_defaultlib.signal_selection_component_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'ioi_addra_pu_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:81]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'ioi_addra_convu_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:82]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'ioi_addra_comm_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:83]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'padding_address_pu_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:88]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'padding_addr_convolution_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:89]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'ioi_addra_out' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:91]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'padding_address_out' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:94]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit signal_selection_component_test in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 781.004 ; gain = 20.113
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Tue Sep 22 09:36:55 2020] Launched synth_1...
+Run output will be captured here: F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'signal_selection_component_test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj signal_selection_component_test_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signal_selection_component_test'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim'
+"xelab -wto 346904a4b4e64b0bad82b581b8b9d543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot signal_selection_component_test_behav xil_defaultlib.signal_selection_component_test -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 346904a4b4e64b0bad82b581b8b9d543 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot signal_selection_component_test_behav xil_defaultlib.signal_selection_component_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'ioi_addra_pu_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:81]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'ioi_addra_convu_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:82]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'ioi_addra_comm_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:83]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'padding_address_pu_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:88]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'padding_addr_convolution_in' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:89]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'ioi_addra_out' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:91]
+ERROR: [VRFC 10-3311] expression has 14 elements ; formal 'padding_address_out' expects 12 [F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.srcs/sim_1/new/signal_selection_component_test.vhd:94]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit signal_selection_component_test in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'F:/Semester 7/HDL/project/Median_Filter_For_SandPNoice/Median_Filter_For_SandPNoice.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 22 09:41:25 2020...
